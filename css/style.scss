@@ -1,0 +1,370 @@
+$maxWidth: 1200;
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$addMobSize: $addSize + $addSize * 0.7;
+	@media (max-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+	}
+	@media (min-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+	}
+}
+
+@function maxWightper($maxWidth,$width){
+    @return (100% * $width)/$maxWidth
+};
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url('../imges/92dc3607bd5e0ec4c69cdba7038d8ce3\ 1.png') top / cover no-repeat;
+    background-size: round auto;
+    font-family: 'El Messiri', sans-serif;
+    padding: 50px 0;
+    overflow-x: hidden;
+
+}
+
+h1, h2, h3{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header{
+    max-width: 100%;
+    max-height: 100%;
+    .header__body{
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        &__container{
+            display: flex;
+            align-items: center;
+            flex-direction: column ;
+            gap: 15px 0;
+            h1{
+                text-transform: uppercase; 
+                text-align: center;
+                font-weight: 600;
+                font-size: 40px;
+                @include adaptiv-font(40, 10);
+                line-height: 135%;
+                span{
+                    // color:
+                    color: #0A96A8;
+                }
+            }
+            h2{
+                font-family: 'Montserrat', sans-serif;
+                text-align: center;
+                font-weight: 100;
+                font-size: 24px;
+                @include adaptiv-font(24, 5);
+                line-height: 155%;
+                color: #4B4B4B;
+                span{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+main{
+    margin: 75px 0 0 0;
+    .main__body{
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        &__container{
+            position: relative;
+            .main__question{
+                min-height: 443px;
+                background: linear-gradient(77.75deg, #25B9CC 9.53%, #39C7D9 47.16%, #1AC5DB 102.16%), #D9D9D9;
+                border-radius: 20px;
+                .question{
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 15px 66px 15px 51px ;
+                    border-radius: 20px;
+                    box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+                    h1{
+                        text-transform: uppercase; 
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 24px;
+                        @include adaptiv-font(24, 5);
+                        line-height: 155%;
+                    }
+                    .questionNumber{
+                        margin:0 100px 0 0; 
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        text-transform: uppercase; 
+                        font-family: 'El Messiri';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 66.8919px;
+                        @include adaptiv-font(66.8919, 16.5);
+                        line-height: 135%;
+                        color:  #E2D0BF;
+                    }
+                    .questionNumber::before{
+                        content: '';
+                        flex: 0 0 70px;
+                        margin: 0 21px 0 0; 
+                        height: 1px;
+                        background-color: #E2D0BF;
+
+                    }
+                }
+            }
+            .answers{
+                padding: 29px 66px 75px 52px;
+                .answer{
+                    grid-template-rows: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    width: maxWightper(1100px,739px);
+                    .answerOne{
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 20px;
+                        @include adaptiv-font(20, 2);
+                        line-height: 155%;
+                        background: rgba(255, 255, 255, 0.2);
+                        color: white;
+                        border-radius: 5px;
+                        padding: 16px 15px 16px 25px; 
+
+                        transition: 0.3s;
+                        cursor: pointer;
+                    }
+                    
+                    .answerOne:hover{
+                        background: #FFFFFF;
+                        color: #505050;
+                    }
+                    .answerEnter{
+                        background: #FFFFFF;
+                        color: #505050;
+                    }
+                    
+                }
+            }
+            button{
+                position: absolute;
+                cursor: pointer;
+                right: 52px;
+                bottom: 68px;
+                min-width: maxWightper(1200px, 239px);
+                min-height: 78px;
+                background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), #FFFFFF;
+                border-radius: 10px;
+                border: solid 0px #DECCB2;
+                a{
+                    text-decoration: none;
+                    transition: 0.3s;
+
+
+                    color: #4B4B4B;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    @include adaptiv-font(24, 5);
+                    line-height: 155%;
+                    text-align: center;
+
+                    display: flex;
+                    justify-content: center;
+                    gap: 23px;
+                    align-items: center;                    
+
+                    .text{
+                        text-transform: uppercase; 
+                    }
+                }
+
+
+            }
+        }
+
+    }
+}
+
+.answer3{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .answerTwe{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        @include adaptiv-font(20, 2);
+        line-height: 155%;
+        color: white;
+        border-radius: 5px;
+        padding: 16px 15px 16px 25px;
+        span{
+            font-weight: 500;
+        }
+    }
+}
+
+// .main__body__container{
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     .btm3{
+//         // position: absolute;
+//         // cursor: pointer;
+//         // right: 50% - maxWightper(1200px, 239px)/2;
+//         // bottom: 33px;
+//         min-width: maxWightper(1200px, 239px);
+//         min-height: 78px;
+//         background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), #FFFFFF;
+//         border-radius: 10px;
+//         border: solid 0px #DECCB2;
+//         a{
+//             text-decoration: none;
+//             transition: 0.3s;
+
+
+//             color: #4B4B4B;
+//             font-family: 'Montserrat';
+//             font-style: normal;
+//             font-weight: 500;
+//             font-size: 24px;
+//             @include adaptiv-font(24, 5);
+//             line-height: 155%;
+//             text-align: center;
+
+//             display: flex;
+//             justify-content: center;
+//             gap: 23px;
+//             align-items: center;                    
+
+//             .text{
+//                 text-transform: uppercase; 
+//             }
+//         }
+
+
+//     }
+
+// }
+
+
+@media (min-width: 1200px){
+    header{
+        .header__body{
+            &__container{
+                gap: 15px 0;
+                h1{
+                    font-size: 40px;
+                    @include adaptiv-font(40, 40);
+                }
+                h2{
+                    font-size: 24px;
+                    @include adaptiv-font(24, 24);
+                }
+            }
+        }
+    }
+    main{
+    .main__body{
+        &__container{
+            .main__question{
+                .question{
+                    h1{
+                        font-size: 24px;
+                        @include adaptiv-font(24, 24);
+                    }
+                    .questionNumber{
+                        font-size: 66.8919px;
+                        @include adaptiv-font(66.8919, 66.8919);
+                    }
+                }
+            }
+            .answers{
+                .answer{
+                    .answerOne{
+                        font-size: 20px;
+                        @include adaptiv-font(20, 20);
+                    }
+                }
+                }
+            }
+            button{
+                a{
+                    font-size: 24px;
+                    @include adaptiv-font(24, 24);
+                }
+
+
+            }
+        }
+
+    }
+}
+
+@media(max-width: 630px){
+    header{
+        .header__body{
+            &__container{
+                gap: 15px 0;
+                h1{
+                    font-size: 40px;
+                    @include adaptiv-font(40, 40);
+                }
+                h2{
+                    font-size: 24px;
+                    @include adaptiv-font(24, 24);
+                }
+            }
+        }
+    }
+    main{
+        .main__body{
+            &__container{
+                position: static;
+                display: flex;
+                flex-direction: column;
+                .answers{
+                    .answer{
+                        width: 100%;
+                        .answerOne{
+                            @include adaptiv-font(15, 15);
+                        }
+                    }
+                }
+                .main__question{
+                    .question{
+                        h1{
+                            @include adaptiv-font(17, 17);
+                        }
+                    }
+                }
+                button{
+                    // position: static;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,529 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../imges/92dc3607bd5e0ec4c69cdba7038d8ce3 1.png") top/cover no-repeat;
+  background-size: round auto;
+  font-family: 'El Messiri', sans-serif;
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+header .header__body {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+header .header__body__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px 0;
+}
+
+header .header__body__container h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 135%;
+}
+
+@media (max-width: 767px) {
+  header .header__body__container h1 {
+    font-size: calc(10px + 51 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  header .header__body__container h1 {
+    font-size: calc(10px + 30 * (100vw / 1200));
+  }
+}
+
+header .header__body__container h1 span {
+  color: #0A96A8;
+}
+
+header .header__body__container h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 155%;
+  color: #4B4B4B;
+}
+
+@media (max-width: 767px) {
+  header .header__body__container h2 {
+    font-size: calc(5px + 32.3 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  header .header__body__container h2 {
+    font-size: calc(5px + 19 * (100vw / 1200));
+  }
+}
+
+header .header__body__container h2 span {
+  font-weight: 400;
+}
+
+main {
+  margin: 75px 0 0 0;
+}
+
+main .main__body {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+main .main__body__container {
+  position: relative;
+}
+
+main .main__body__container .main__question {
+  min-height: 443px;
+  background: linear-gradient(77.75deg, #25B9CC 9.53%, #39C7D9 47.16%, #1AC5DB 102.16%), #D9D9D9;
+  border-radius: 20px;
+}
+
+main .main__body__container .main__question .question {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 66px 15px 51px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+          box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+}
+
+main .main__body__container .main__question .question h1 {
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 155%;
+}
+
+@media (max-width: 767px) {
+  main .main__body__container .main__question .question h1 {
+    font-size: calc(5px + 32.3 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  main .main__body__container .main__question .question h1 {
+    font-size: calc(5px + 19 * (100vw / 1200));
+  }
+}
+
+main .main__body__container .main__question .question .questionNumber {
+  margin: 0 100px 0 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 66.8919px;
+  line-height: 135%;
+  color: #E2D0BF;
+}
+
+@media (max-width: 767px) {
+  main .main__body__container .main__question .question .questionNumber {
+    font-size: calc(16.5px + 85.66623 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  main .main__body__container .main__question .question .questionNumber {
+    font-size: calc(16.5px + 50.3919 * (100vw / 1200));
+  }
+}
+
+main .main__body__container .main__question .question .questionNumber::before {
+  content: '';
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70px;
+          flex: 0 0 70px;
+  margin: 0 21px 0 0;
+  height: 1px;
+  background-color: #E2D0BF;
+}
+
+main .main__body__container .answers {
+  padding: 29px 66px 75px 52px;
+}
+
+main .main__body__container .answers .answer {
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  width: 67.18182%;
+}
+
+main .main__body__container .answers .answer .answerOne {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 155%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 5px;
+  padding: 16px 15px 16px 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  main .main__body__container .answers .answer .answerOne {
+    font-size: calc(2px + 30.6 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  main .main__body__container .answers .answer .answerOne {
+    font-size: calc(2px + 18 * (100vw / 1200));
+  }
+}
+
+main .main__body__container .answers .answer .answerOne:hover {
+  background: #FFFFFF;
+  color: #505050;
+}
+
+main .main__body__container .answers .answer .answerEnter {
+  background: #FFFFFF;
+  color: #505050;
+}
+
+main .main__body__container button {
+  position: absolute;
+  cursor: pointer;
+  right: 52px;
+  bottom: 68px;
+  min-width: 19.91667%;
+  min-height: 78px;
+  background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), #FFFFFF;
+  border-radius: 10px;
+  border: solid 0px #DECCB2;
+}
+
+main .main__body__container button a {
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #4B4B4B;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 155%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 23px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  main .main__body__container button a {
+    font-size: calc(5px + 32.3 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  main .main__body__container button a {
+    font-size: calc(5px + 19 * (100vw / 1200));
+  }
+}
+
+main .main__body__container button a .text {
+  text-transform: uppercase;
+}
+
+.answer3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.answer3 .answerTwe {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 155%;
+  color: white;
+  border-radius: 5px;
+  padding: 16px 15px 16px 25px;
+}
+
+@media (max-width: 767px) {
+  .answer3 .answerTwe {
+    font-size: calc(2px + 30.6 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  .answer3 .answerTwe {
+    font-size: calc(2px + 18 * (100vw / 1200));
+  }
+}
+
+.answer3 .answerTwe span {
+  font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+  header .header__body__container {
+    gap: 15px 0;
+  }
+  header .header__body__container h1 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 767px) {
+  header .header__body__container h1 {
+    font-size: calc(40px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 767px) {
+  header .header__body__container h1 {
+    font-size: calc(40px + 0 * (100vw / 1200));
+  }
+}
+
+@media (min-width: 1200px) {
+  header .header__body__container h2 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 767px) {
+  header .header__body__container h2 {
+    font-size: calc(24px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 767px) {
+  header .header__body__container h2 {
+    font-size: calc(24px + 0 * (100vw / 1200));
+  }
+}
+
+@media (min-width: 1200px) {
+  main .main__body__container .main__question .question h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 767px) {
+  main .main__body__container .main__question .question h1 {
+    font-size: calc(24px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 767px) {
+  main .main__body__container .main__question .question h1 {
+    font-size: calc(24px + 0 * (100vw / 1200));
+  }
+}
+
+@media (min-width: 1200px) {
+  main .main__body__container .main__question .question .questionNumber {
+    font-size: 66.8919px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 767px) {
+  main .main__body__container .main__question .question .questionNumber {
+    font-size: calc(66.8919px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 767px) {
+  main .main__body__container .main__question .question .questionNumber {
+    font-size: calc(66.8919px + 0 * (100vw / 1200));
+  }
+}
+
+@media (min-width: 1200px) {
+  main .main__body__container .answers .answer .answerOne {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 767px) {
+  main .main__body__container .answers .answer .answerOne {
+    font-size: calc(20px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 767px) {
+  main .main__body__container .answers .answer .answerOne {
+    font-size: calc(20px + 0 * (100vw / 1200));
+  }
+}
+
+@media (min-width: 1200px) {
+  main .main__body button a {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 767px) {
+  main .main__body button a {
+    font-size: calc(24px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 767px) {
+  main .main__body button a {
+    font-size: calc(24px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 630px) {
+  header .header__body__container {
+    gap: 15px 0;
+  }
+  header .header__body__container h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 630px) and (max-width: 767px) {
+  header .header__body__container h1 {
+    font-size: calc(40px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 630px) and (min-width: 767px) {
+  header .header__body__container h1 {
+    font-size: calc(40px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 630px) {
+  header .header__body__container h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 630px) and (max-width: 767px) {
+  header .header__body__container h2 {
+    font-size: calc(24px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 630px) and (min-width: 767px) {
+  header .header__body__container h2 {
+    font-size: calc(24px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 630px) {
+  main .main__body__container {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .main__body__container .answers .answer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 630px) and (max-width: 767px) {
+  main .main__body__container .answers .answer .answerOne {
+    font-size: calc(15px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 630px) and (min-width: 767px) {
+  main .main__body__container .answers .answer .answerOne {
+    font-size: calc(15px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 630px) and (max-width: 767px) {
+  main .main__body__container .main__question .question h1 {
+    font-size: calc(17px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 630px) and (min-width: 767px) {
+  main .main__body__container .main__question .question h1 {
+    font-size: calc(17px + 0 * (100vw / 1200));
+  }
+}
+/*# sourceMappingURL=style.css.map */
