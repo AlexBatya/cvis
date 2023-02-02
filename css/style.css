@@ -1,3 +1,5 @@
+@import url("./popup.css");
+@import url("./animate.css");
 body {
   margin: 0;
   padding: 0;
@@ -105,13 +107,10 @@ main .main__body {
   left: 0;
 }
 
-main .main__body__container {
-  position: relative;
-}
-
 main .main__body__container .main__question {
+  position: relative;
   min-height: 443px;
-  background: linear-gradient(77.75deg, #25B9CC 9.53%, #39C7D9 47.16%, #1AC5DB 102.16%), #D9D9D9;
+  background: url("../imges/popup.png") top/cover no-repeat;
   border-radius: 20px;
 }
 
@@ -193,11 +192,11 @@ main .main__body__container .main__question .question .questionNumber::before {
   background-color: #E2D0BF;
 }
 
-main .main__body__container .answers {
+main .main__body__container .main__question .answers {
   padding: 29px 66px 75px 52px;
 }
 
-main .main__body__container .answers .answer {
+main .main__body__container .main__question .answers .answer {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   display: -webkit-box;
@@ -211,7 +210,7 @@ main .main__body__container .answers .answer {
   width: 67.18182%;
 }
 
-main .main__body__container .answers .answer .answerOne {
+main .main__body__container .main__question .answers .answer .answerOne {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
@@ -227,28 +226,28 @@ main .main__body__container .answers .answer .answerOne {
 }
 
 @media (max-width: 767px) {
-  main .main__body__container .answers .answer .answerOne {
+  main .main__body__container .main__question .answers .answer .answerOne {
     font-size: calc(2px + 30.6 * ((100vw - 320px) / 1200));
   }
 }
 
 @media (min-width: 767px) {
-  main .main__body__container .answers .answer .answerOne {
+  main .main__body__container .main__question .answers .answer .answerOne {
     font-size: calc(2px + 18 * (100vw / 1200));
   }
 }
 
-main .main__body__container .answers .answer .answerOne:hover {
+main .main__body__container .main__question .answers .answer .answerOne:hover {
   background: #FFFFFF;
   color: #505050;
 }
 
-main .main__body__container .answers .answer .answerEnter {
+main .main__body__container .main__question .answers .answer .answerEnter {
   background: #FFFFFF;
   color: #505050;
 }
 
-main .main__body__container button {
+main .main__body__container .main__question button {
   position: absolute;
   cursor: pointer;
   right: 52px;
@@ -260,7 +259,7 @@ main .main__body__container button {
   border: solid 0px #DECCB2;
 }
 
-main .main__body__container button a {
+main .main__body__container .main__question button a {
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -284,18 +283,18 @@ main .main__body__container button a {
 }
 
 @media (max-width: 767px) {
-  main .main__body__container button a {
+  main .main__body__container .main__question button a {
     font-size: calc(5px + 32.3 * ((100vw - 320px) / 1200));
   }
 }
 
 @media (min-width: 767px) {
-  main .main__body__container button a {
+  main .main__body__container .main__question button a {
     font-size: calc(5px + 19 * (100vw / 1200));
   }
 }
 
-main .main__body__container button a .text {
+main .main__body__container .main__question button a .text {
   text-transform: uppercase;
 }
 
@@ -335,6 +334,205 @@ main .main__body__container button a .text {
 
 .answer3 .answerTwe span {
   font-weight: 500;
+}
+
+.main__question3 {
+  min-height: 443px;
+  background: url("../imges/popup.png") top/cover no-repeat;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__question3 .question {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 66px 15px 51px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+          box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+}
+
+.main__question3 .question h1 {
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 155%;
+}
+
+@media (max-width: 767px) {
+  .main__question3 .question h1 {
+    font-size: calc(5px + 32.3 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  .main__question3 .question h1 {
+    font-size: calc(5px + 19 * (100vw / 1200));
+  }
+}
+
+.main__question3 .question .questionNumber {
+  margin: 0 100px 0 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 66.8919px;
+  line-height: 135%;
+  color: #E2D0BF;
+}
+
+@media (max-width: 767px) {
+  .main__question3 .question .questionNumber {
+    font-size: calc(16.5px + 85.66623 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  .main__question3 .question .questionNumber {
+    font-size: calc(16.5px + 50.3919 * (100vw / 1200));
+  }
+}
+
+.main__question3 .question .questionNumber::before {
+  content: '';
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70px;
+          flex: 0 0 70px;
+  margin: 0 21px 0 0;
+  height: 1px;
+  background-color: #E2D0BF;
+}
+
+.main__question3 .answers {
+  padding: 29px 66px 75px 52px;
+  padding-bottom: 14px;
+}
+
+.main__question3 .answers .answer {
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  width: 67.18182%;
+}
+
+.main__question3 .answers .answer .answerOne {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 155%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 5px;
+  padding: 16px 15px 16px 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .main__question3 .answers .answer .answerOne {
+    font-size: calc(2px + 30.6 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  .main__question3 .answers .answer .answerOne {
+    font-size: calc(2px + 18 * (100vw / 1200));
+  }
+}
+
+.main__question3 .answers .answer .answerOne:hover {
+  background: #FFFFFF;
+  color: #505050;
+}
+
+.main__question3 .answers .answer .answerEnter {
+  background: #FFFFFF;
+  color: #505050;
+}
+
+.main__question3 button {
+  position: static !important;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 0 40px 0;
+  min-width: 19.91667%;
+  min-height: 78px;
+  background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), #FFFFFF;
+  border-radius: 10px;
+  border: solid 0px #DECCB2;
+}
+
+.main__question3 button a {
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #4B4B4B;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 155%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 23px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .main__question3 button a {
+    font-size: calc(5px + 32.3 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  .main__question3 button a {
+    font-size: calc(5px + 19 * (100vw / 1200));
+  }
+}
+
+.main__question3 button a .text {
+  text-transform: uppercase;
 }
 
 @media (min-width: 1200px) {
@@ -448,6 +646,15 @@ main .main__body__container button a .text {
   }
 }
 
+@media (max-width: 470px) {
+  main .main__body__container .main__question .question {
+    padding: 15px;
+  }
+  main .main__body__container .main__question3 .question {
+    padding: 15px;
+  }
+}
+
 @media (max-width: 630px) {
   header .header__body__container {
     gap: 15px 0;
@@ -488,42 +695,196 @@ main .main__body__container button a .text {
 }
 
 @media (max-width: 630px) {
-  main .main__body__container {
-    position: static;
+  main .main__body__container .main__question {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  main .main__body__container .answers .answer {
-    width: 100%;
-  }
 }
 
 @media (max-width: 630px) and (max-width: 767px) {
-  main .main__body__container .answers .answer .answerOne {
+  main .main__body__container .main__question .question h1 {
     font-size: calc(15px + 0 * ((100vw - 320px) / 1200));
   }
 }
 
 @media (max-width: 630px) and (min-width: 767px) {
-  main .main__body__container .answers .answer .answerOne {
+  main .main__body__container .main__question .question h1 {
     font-size: calc(15px + 0 * (100vw / 1200));
   }
 }
 
 @media (max-width: 630px) and (max-width: 767px) {
-  main .main__body__container .main__question .question h1 {
+  main .main__body__container .main__question .question .questionNumber {
+    font-size: calc(66.8919px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 630px) and (min-width: 767px) {
+  main .main__body__container .main__question .question .questionNumber {
+    font-size: calc(66.8919px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 630px) {
+  main .main__body__container .main__question .answers {
+    padding-bottom: 14px;
+  }
+  main .main__body__container .main__question .answers .answer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 630px) and (max-width: 767px) {
+  main .main__body__container .main__question .answers .answer .answerOne {
+    font-size: calc(15px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 630px) and (min-width: 767px) {
+  main .main__body__container .main__question .answers .answer .answerOne {
+    font-size: calc(15px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 630px) and (max-width: 767px) {
+  main .main__body__container .main__question .main__question .question h1 {
     font-size: calc(17px + 0 * ((100vw - 320px) / 1200));
   }
 }
 
 @media (max-width: 630px) and (min-width: 767px) {
-  main .main__body__container .main__question .question h1 {
+  main .main__body__container .main__question .main__question .question h1 {
     font-size: calc(17px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 630px) {
+  main .main__body__container .main__question button {
+    position: static !important;
+    margin: 0 0 40px 0;
+  }
+  main .main__body__container .main__question button a {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 630px) and (max-width: 767px) {
+  main .main__body__container .main__question button a {
+    font-size: calc(15px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 630px) and (min-width: 767px) {
+  main .main__body__container .main__question button a {
+    font-size: calc(15px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 630px) {
+  main .main__body__container .main__question3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 630px) and (max-width: 767px) {
+  main .main__body__container .main__question3 .question h1 {
+    font-size: calc(15px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 630px) and (min-width: 767px) {
+  main .main__body__container .main__question3 .question h1 {
+    font-size: calc(15px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 630px) and (max-width: 767px) {
+  main .main__body__container .main__question3 .question .questionNumber {
+    font-size: calc(66.8919px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 630px) and (min-width: 767px) {
+  main .main__body__container .main__question3 .question .questionNumber {
+    font-size: calc(66.8919px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 630px) {
+  main .main__body__container .main__question3 .answers {
+    padding-bottom: 14px;
+  }
+  main .main__body__container .main__question3 .answers .answer3 {
+    width: 100%;
+  }
+  main .main__body__container .main__question3 .answers .answer3 .answerTwe {
+    padding: 2px;
+  }
+}
+
+@media (max-width: 630px) and (max-width: 767px) {
+  main .main__body__container .main__question3 .answers .answer3 .answerTwe {
+    font-size: calc(15px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 630px) and (min-width: 767px) {
+  main .main__body__container .main__question3 .answers .answer3 .answerTwe {
+    font-size: calc(15px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 630px) and (max-width: 767px) {
+  main .main__body__container .main__question3 .main__question .question h1 {
+    font-size: calc(17px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 630px) and (min-width: 767px) {
+  main .main__body__container .main__question3 .main__question .question h1 {
+    font-size: calc(17px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 630px) {
+  main .main__body__container .main__question3 button {
+    position: static !important;
+    margin: 0 0 40px 0;
+  }
+  main .main__body__container .main__question3 button a {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 630px) and (max-width: 767px) {
+  main .main__body__container .main__question3 button a {
+    font-size: calc(15px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 630px) and (min-width: 767px) {
+  main .main__body__container .main__question3 button a {
+    font-size: calc(15px + 0 * (100vw / 1200));
   }
 }
 /*# sourceMappingURL=style.css.map */

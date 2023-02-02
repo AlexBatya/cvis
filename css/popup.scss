@@ -1,0 +1,101 @@
+.popup{
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    &__shell{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(19, 19, 19, 0.5);
+    }
+    &__body{
+        position: fixed;
+        top: 20%;
+        left: 27%;
+        width: 671px;
+        height: 520px;
+        background: url('../imges/popup.png') top / cover no-repeat;
+        &__container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .arrow{
+                position: absolute;
+                top: 216px;
+                left: 560px;
+                width: 100%;
+                height: 100%;
+            }
+            .popup__question{
+                min-width: 671px;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+                padding: 47px 0 33px 0;
+                box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+                h2{
+                    text-transform: uppercase; 
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 26px;
+                    // @include adaptiv-font(24, 5);
+                    line-height: 155%;
+                }
+            }
+            h3{
+                padding: 34px 63px 70px 63px;
+                color: white;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 155%;
+                text-align: center;
+                span{
+                    font-weight: 500;
+                }
+            }
+            
+            button{
+                background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), linear-gradient(95.22deg, #FFD278 12.45%, #F5D7A2 47.26%, #FFD07E 100%);
+                border-radius: 12.0623px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                padding: 28px 0;
+                width: 550px;
+                text-align: center;
+                font-size: 16px;
+                line-height: 155%;
+                text-align: center;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+
+                box-shadow: linear-gradient(120.38deg, #C1B4A0 30.49%, #DECCB2 93.2%), #CF9A3C;
+
+                border: none;
+                color: #856120;
+            }
+            small{
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 155%;
+                text-align: center;
+                color: #FFFFFF;
+                padding: 0 125px;
+                margin: 25px 0;
+            }
+        }
+    }
+} 
