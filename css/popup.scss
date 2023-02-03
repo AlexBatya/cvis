@@ -1,25 +1,45 @@
+$maxWidth: 1200;
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$addMobSize: $addSize + $addSize * 0.7;
+	@media (max-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+	}
+	@media (min-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+	}
+}
+
+@function maxWightper($maxWidth,$width){
+    @return (100% * $width)/$maxWidth
+};
+body{
+        background: none;
+    }
+h1, h2, h3, p{
+    padding: 0;
+    margin: 0;
+}
+
 .popup{
-    position: relative;
+    // position: relative;
+    margin: 64px 0 0 0;
+    display: flex;
+    justify-content: center;
     z-index: 2;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
     &__shell{
-        position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(19, 19, 19, 0.5);
     }
     &__body{
-        position: fixed;
-        top: 20%;
-        left: 27%;
-        width: 671px;
-        height: 520px;
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 671px;
+        max-height: 520px;
+        border-radius: 20px;
         background: url('../imges/popup.png') top / cover no-repeat;
         &__container{
             display: flex;
@@ -30,8 +50,8 @@
                 position: absolute;
                 top: 216px;
                 left: 560px;
-                width: 100%;
-                height: 100%;
+                width: 40px;
+                height: 40px;
             }
             .popup__question{
                 min-width: 671px;
@@ -99,3 +119,133 @@
         }
     }
 } 
+
+.consultation{
+    margin: 64px 0 0 0;
+    
+    display: flex;
+    justify-content: center;
+    &__shell{
+        
+    }
+    .consultation__body{
+        position: relative;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        max-width: 1000px;
+        max-height: 800px; 
+        background: url('../imges/popup.png') top / cover no-repeat;
+        &__container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .arrow{
+                position: absolute;
+                top: 470px;
+                left: 780px;
+                width: 40px;
+                height: 40px;
+            }
+            .consultation__question{
+                // min-width: 671px;
+                width: 100%;
+                background-color: white;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border-radius: 20px ;
+                padding: 47px 0 33px 0;
+                box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+                h2{
+                    text-transform: uppercase; 
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 26px;
+                    // @include adaptiv-font(24, 5);
+                    line-height: 155%;
+                }
+                .questionNumber{
+                    margin:0 100px 0 0; 
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-transform: uppercase; 
+                    font-family: 'El Messiri';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 66.8919px;
+                    @include adaptiv-font(66.8919, 16.5);
+                    line-height: 135%;
+                    color:  #E2D0BF;
+                }
+                .questionNumber::before{
+                    content: '';
+                    flex: 0 0 70px;
+                    margin: 0 21px 0 0; 
+                    height: 1px;
+                    background-color: #E2D0BF;
+
+                }
+            }
+            .consultation__continium{
+                margin: 55px 79px 37px 116px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 155%;
+                text-align: center;
+                color: #FFFFFF; 
+            }
+            h3{
+                padding: 34px 228px 70px 227px;
+                color: white;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 155%;
+                text-align: center;
+                span{
+                    font-weight: 500;
+                }
+            }
+            
+            button{
+                background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), linear-gradient(95.22deg, #FFD278 12.45%, #F5D7A2 47.26%, #FFD07E 100%);
+                border-radius: 12.0623px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                padding: 28px 0;
+                width: 550px;
+                text-align: center;
+                font-size: 16px;
+                line-height: 155%;
+                text-align: center;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+
+                box-shadow: linear-gradient(120.38deg, #C1B4A0 30.49%, #DECCB2 93.2%), #CF9A3C;
+
+                border: none;
+                color: #856120;
+            }
+            small{
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 155%;
+                text-align: center;
+                color: #FFFFFF;
+                padding: 0 289  px;
+                margin: 25px 0;
+            }
+        }
+    }
+}

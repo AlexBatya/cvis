@@ -76,6 +76,9 @@ $(document).ready(()=>{
                         $button.children('a').attr('href', '../pages/list02_3_03_1_04_2.html')
                         break;
 
+                    case 'Уже занимаюсь самопознанием. Нужен наставник для более глубокого изучения себя':
+                        $button.children('a').attr('href', '../pages/popup2.html')
+                        break;
                     
                 }
             } 

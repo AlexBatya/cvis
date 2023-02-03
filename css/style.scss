@@ -22,12 +22,14 @@ body{
     font-family: 'El Messiri', sans-serif;
     padding: 50px 0;
     overflow-x: hidden;
+    color: #505050;
 
 }
 
 h1, h2, h3{
     margin: 0;
     padding: 0;
+
 }
 
 .container{
@@ -328,7 +330,6 @@ main{
         a{
             text-decoration: none;
             transition: 0.3s;
-
 
             color: #4B4B4B;
             font-family: 'Montserrat';
