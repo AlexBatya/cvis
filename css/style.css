@@ -1,9 +1,207 @@
-@import url("./popup.css");
-@import url("./animate.css");
+.popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2;
+}
+
+.popup__body {
+  margin: 64px 0 0 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 671px;
+  max-height: 520px;
+  border-radius: 20px;
+  background: url("https://static.tildacdn.com/tild3963-3536-4433-b463-393964643636/popup.png") top/cover no-repeat;
+}
+
+.popup__body__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.popup__body__container .arrow {
+  position: absolute;
+  top: 216px;
+  left: 560px;
+  width: 40px;
+  height: 40px;
+}
+
+.popup__body__container .popup__question {
+  min-width: 671px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 20px;
+  padding: 47px 0 33px 0;
+  -webkit-box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+          box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+}
+
+.popup__body__container .popup__question h2 {
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 155%;
+}
+
+.popup__body__container h3 {
+  padding: 34px 63px 70px 63px;
+  color: white;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 155%;
+  text-align: center;
+}
+
+.popup__body__container h3 span {
+  font-weight: 500;
+}
+
+.popup__body__container a {
+  text-decoration: none;
+  background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), linear-gradient(95.22deg, #FFD278 12.45%, #F5D7A2 47.26%, #FFD07E 100%);
+  border-radius: 12.0623px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  padding: 28px 0;
+  width: 81.96721%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 155%;
+  text-align: center;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  -webkit-box-shadow: linear-gradient(120.38deg, #C1B4A0 30.49%, #DECCB2 93.2%), #CF9A3C;
+          box-shadow: linear-gradient(120.38deg, #C1B4A0 30.49%, #DECCB2 93.2%), #CF9A3C;
+  border: none;
+  color: #856120;
+}
+
+.popup__body__container small {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 155%;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0 125px;
+  margin: 25px 0;
+}
+
+@media (max-width: 630px) {
+  .popup__body {
+    max-width: 531px;
+    max-height: 520px;
+  }
+  .popup__body__container .arrow {
+    position: absolute;
+    top: 230px;
+    left: 400px;
+  }
+  .popup__body__container .popup__question {
+    min-width: 531px;
+  }
+  .popup__body__container .popup__question h2 {
+    font-size: 17px;
+  }
+  .popup__body__container h3 {
+    padding: 34px 63px 70px 63px;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 155%;
+    text-align: center;
+  }
+  .popup__body__container a {
+    padding: 28px 0;
+    max-width: 350px;
+  }
+  .popup__body__container small {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 155%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 25px 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .popup__body {
+    max-width: 371px;
+    max-height: 520px;
+  }
+  .popup__body__container .arrow {
+    display: none;
+  }
+  .popup__body__container .popup__question {
+    min-width: 371px;
+  }
+  .popup__body__container .popup__question h2 {
+    text-align: center;
+    font-size: 15px;
+    line-height: 155%;
+  }
+  .popup__body__container h3 {
+    padding: 34px 30px 30px 30px;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 155%;
+    text-align: center;
+  }
+  .popup__body__container a {
+    padding: 28px 0;
+    max-width: 350px;
+    font-size: 13px;
+  }
+  .popup__body__container small {
+    font-size: 12px;
+    line-height: 155%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 25px 0;
+    padding: 0 50px;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
-  background: url("../imges/92dc3607bd5e0ec4c69cdba7038d8ce3 1.png") top/cover no-repeat;
+  background: url("https://static.tildacdn.com/tild3632-3730-4131-b665-373537356538/92dc3607bd5e0ec4c69c.png") top/cover no-repeat;
   background-size: round auto;
   font-family: 'El Messiri', sans-serif;
   padding: 50px 0;
@@ -18,6 +216,12 @@ h1, h2, h3 {
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.containerPop {
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -111,7 +315,7 @@ main .main__body {
 main .main__body__container .main__question {
   position: relative;
   min-height: 443px;
-  background: url("../imges/popup.png") top/cover no-repeat;
+  background: url("https://static.tildacdn.com/tild3963-3536-4433-b463-393964643636/popup.png") top/cover no-repeat;
   border-radius: 20px;
 }
 
@@ -260,7 +464,7 @@ main .main__body__container .main__question button {
   border: solid 0px #DECCB2;
 }
 
-main .main__body__container .main__question button a {
+main .main__body__container .main__question button .buttonLink {
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -284,18 +488,18 @@ main .main__body__container .main__question button a {
 }
 
 @media (max-width: 767px) {
-  main .main__body__container .main__question button a {
+  main .main__body__container .main__question button .buttonLink {
     font-size: calc(5px + 32.3 * ((100vw - 320px) / 1200));
   }
 }
 
 @media (min-width: 767px) {
-  main .main__body__container .main__question button a {
+  main .main__body__container .main__question button .buttonLink {
     font-size: calc(5px + 19 * (100vw / 1200));
   }
 }
 
-main .main__body__container .main__question button a .text {
+main .main__body__container .main__question button .buttonLink .text {
   text-transform: uppercase;
 }
 
@@ -339,7 +543,7 @@ main .main__body__container .main__question button a .text {
 
 .main__question3 {
   min-height: 443px;
-  background: url("../imges/popup.png") top/cover no-repeat;
+  background: url("https://static.tildacdn.com/tild3963-3536-4433-b463-393964643636/popup.png") top/cover no-repeat;
   border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,6 +632,178 @@ main .main__body__container .main__question button a .text {
   background-color: #E2D0BF;
 }
 
+.main__question3 button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  cursor: pointer;
+  width: 239px;
+  height: 78px;
+  background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), #FFFFFF;
+  border-radius: 10px;
+  border: solid 0px #DECCB2;
+  margin: 39px 0 40px 0;
+}
+
+.main__question3 button .buttonLink {
+  text-decoration: none;
+  color: #E2D0BF;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 155%;
+  width: 239px;
+  height: 78px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .main__question3 button .buttonLink {
+    font-size: calc(5px + 32.3 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  .main__question3 button .buttonLink {
+    font-size: calc(5px + 19 * (100vw / 1200));
+  }
+}
+
+.main__question3 button .buttonLink .text {
+  text-transform: uppercase;
+}
+
+.main__question3 .consult {
+  position: relative;
+  padding: 5.5% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__question3 .consult h3 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 155%;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0 11.6%;
+  margin: 0 0 37px 0;
+}
+
+@media (max-width: 767px) {
+  .main__question3 .consult h3 {
+    font-size: calc(10px + 17 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  .main__question3 .consult h3 {
+    font-size: calc(10px + 10 * (100vw / 1200));
+  }
+}
+
+.main__question3 .consult .arrow {
+  position: absolute;
+  left: 800px;
+  top: 250px;
+}
+
+.main__question3 .consult .arrow img {
+  width: 50px;
+  height: 50px;
+}
+
+.main__question3 .consult h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 155%;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0 22.8%;
+  margin: 0 0 7% 0;
+}
+
+@media (max-width: 767px) {
+  .main__question3 .consult h2 {
+    font-size: calc(14px + 17 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  .main__question3 .consult h2 {
+    font-size: calc(14px + 10 * (100vw / 1200));
+  }
+}
+
+.main__question3 .consult a {
+  padding: 28px 18%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 155%;
+  text-align: center;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #856120;
+  margin: 0 0 3% 0;
+}
+
+.main__question3 .consult small {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 155%;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0 28.9%;
+}
+
+@media (max-width: 767px) {
+  .main__question3 .consult small {
+    font-size: calc(6px + 17 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (min-width: 767px) {
+  .main__question3 .consult small {
+    font-size: calc(6px + 10 * (100vw / 1200));
+  }
+}
+
 .main__question3 .answers {
   padding: 29px 66px 75px 52px;
   padding-bottom: 14px;
@@ -484,10 +860,12 @@ main .main__body__container .main__question button a .text {
   color: #505050;
 }
 
-.main__question3 button {
+.main__question3 .linkpopap2 {
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   position: static !important;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   margin: 0 0 40px 0;
   min-width: 19.91667%;
@@ -495,19 +873,6 @@ main .main__body__container .main__question button a .text {
   background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), #FFFFFF;
   border-radius: 10px;
   border: solid 0px #DECCB2;
-}
-
-.main__question3 button a {
-  text-decoration: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  color: #4B4B4B;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 155%;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,22 +883,29 @@ main .main__body__container .main__question button a .text {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 12px;
+}
+
+.main__question3 .linkpopap2 .text {
+  text-transform: uppercase;
+  color: #4B4B4B;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 155%;
+  font-family: 'Montserrat';
+  font-style: normal;
 }
 
 @media (max-width: 767px) {
-  .main__question3 button a {
+  .main__question3 .linkpopap2 .text {
     font-size: calc(5px + 32.3 * ((100vw - 320px) / 1200));
   }
 }
 
 @media (min-width: 767px) {
-  .main__question3 button a {
+  .main__question3 .linkpopap2 .text {
     font-size: calc(5px + 19 * (100vw / 1200));
   }
-}
-
-.main__question3 button a .text {
-  text-transform: uppercase;
 }
 
 @media (min-width: 1200px) {
@@ -644,6 +1016,40 @@ main .main__body__container .main__question button a .text {
 @media (min-width: 1200px) and (min-width: 767px) {
   main .main__body button a {
     font-size: calc(24px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 900px) {
+  main .main__body__container .main__question3 .consult .arrow {
+    left: 650px;
+    top: 210px;
+  }
+}
+
+@media (max-width: 750px) {
+  main .main__body__container .main__question3 .consult .arrow {
+    left: 580px;
+    top: 210px;
+  }
+}
+
+@media (max-width: 660px) {
+  main .main__body__container .main__question3 .consult .arrow {
+    left: 500px;
+    top: 210px;
+  }
+}
+
+@media (max-width: 560px) {
+  main .main__body__container .main__question3 .consult .arrow {
+    left: 400px;
+    top: 190px;
+  }
+}
+
+@media (max-width: 460px) {
+  main .main__body__container .main__question3 .consult .arrow {
+    display: none;
   }
 }
 
@@ -773,21 +1179,22 @@ main .main__body__container .main__question button a .text {
 @media (max-width: 630px) {
   main .main__body__container .main__question button {
     position: static !important;
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
+    padding: 0 15px;
   }
-  main .main__body__container .main__question button a {
+  main .main__body__container .main__question button a .text {
     gap: 5px;
   }
 }
 
 @media (max-width: 630px) and (max-width: 767px) {
-  main .main__body__container .main__question button a {
+  main .main__body__container .main__question button a .text {
     font-size: calc(15px + 0 * ((100vw - 320px) / 1200));
   }
 }
 
 @media (max-width: 630px) and (min-width: 767px) {
-  main .main__body__container .main__question button a {
+  main .main__body__container .main__question button a .text {
     font-size: calc(15px + 0 * (100vw / 1200));
   }
 }
@@ -869,23 +1276,105 @@ main .main__body__container .main__question button a .text {
 
 @media (max-width: 630px) {
   main .main__body__container .main__question3 button {
-    position: static !important;
-    margin: 0 0 40px 0;
+    max-width: 200px;
   }
-  main .main__body__container .main__question3 button a {
-    gap: 5px;
+  main .main__body__container .main__question3 button .buttonLink {
+    gap: 15px;
+    padding: 0 15px;
   }
 }
 
 @media (max-width: 630px) and (max-width: 767px) {
-  main .main__body__container .main__question3 button a {
+  main .main__body__container .main__question3 button .buttonLink .text {
     font-size: calc(15px + 0 * ((100vw - 320px) / 1200));
   }
 }
 
 @media (max-width: 630px) and (min-width: 767px) {
-  main .main__body__container .main__question3 button a {
+  main .main__body__container .main__question3 button .buttonLink .text {
     font-size: calc(15px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 500px) {
+  header .header__body__container h1 {
+    font-size: 30px;
+    line-height: 135%;
+  }
+}
+
+@media (max-width: 500px) and (max-width: 767px) {
+  header .header__body__container h1 {
+    font-size: calc(30px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 500px) and (min-width: 767px) {
+  header .header__body__container h1 {
+    font-size: calc(30px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 500px) {
+  header .header__body__container h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) and (max-width: 767px) {
+  header .header__body__container h2 {
+    font-size: calc(16px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 500px) and (min-width: 767px) {
+  header .header__body__container h2 {
+    font-size: calc(16px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 500px) {
+  main .main__body__container .main__question .question {
+    padding: 15px 0px 15px 5px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+            box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+  }
+  main .main__body__container .main__question .question h1 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) and (max-width: 767px) {
+  main .main__body__container .main__question .question h1 {
+    font-size: calc(14px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 500px) and (min-width: 767px) {
+  main .main__body__container .main__question .question h1 {
+    font-size: calc(14px + 0 * (100vw / 1200));
+  }
+}
+
+@media (max-width: 500px) {
+  main .main__body__container .main__question3 .question {
+    padding: 15px 0px 15px 5px;
+  }
+  main .main__body__container .main__question3 .question h1 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) and (max-width: 767px) {
+  main .main__body__container .main__question3 .question h1 {
+    font-size: calc(14px + 0 * ((100vw - 320px) / 1200));
+  }
+}
+
+@media (max-width: 500px) and (min-width: 767px) {
+  main .main__body__container .main__question3 .question h1 {
+    font-size: calc(14px + 0 * (100vw / 1200));
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -14,10 +14,204 @@ $maxWidth: 1200;
     @return (100% * $width)/$maxWidth
 };
 
+.popup{
+    // position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    
+    &__body{
+        margin: 64px 0 0 0;
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 671px;
+        // max-width: maxWightper(1200px,671px);
+        max-height: 520px;
+        border-radius: 20px ;
+        background: url('https://static.tildacdn.com/tild3963-3536-4433-b463-393964643636/popup.png') top / cover no-repeat;
+        &__container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .arrow{
+                position: absolute;
+                top: 216px;
+                left: 560px;
+                width: 40px;
+                height: 40px;
+            }
+            .popup__question{
+                min-width: 671px;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+                padding: 47px 0 33px 0;
+                box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+                h2{
+                    text-transform: uppercase; 
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 26px;
+                    // @include adaptiv-font(24, 5);
+                    line-height: 155%;
+                }
+            }
+            h3{
+                padding: 34px 63px 70px 63px;
+                color: white;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 155%;
+                text-align: center;
+                span{
+                    font-weight: 500;
+                }
+            }
+
+            
+            a{
+                text-decoration: none;
+                background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), linear-gradient(95.22deg, #FFD278 12.45%, #F5D7A2 47.26%, #FFD07E 100%);
+                border-radius: 12.0623px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                padding: 28px 0;
+                width: maxWightper(671px,550px);
+                text-align: center;
+                font-size: 16px;
+                line-height: 155%;
+                text-align: center;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+
+                box-shadow: linear-gradient(120.38deg, #C1B4A0 30.49%, #DECCB2 93.2%), #CF9A3C;
+
+                border: none;
+                color: #856120;
+            }
+            small{
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 155%;
+                text-align: center;
+                color: #FFFFFF;
+                padding: 0 125px;
+                margin: 25px 0;
+            }
+        }
+    }
+} 
+
+@media(max-width: 630px){
+.popup{
+    &__body{
+        max-width: 531px;
+        max-height: 520px;
+        &__container{
+            .arrow{
+                position: absolute;
+                top: 230px;
+                left: 400px;
+            }
+            .popup__question{
+                min-width: 531px;
+                h2{
+                    font-size: 17px;
+                }
+            }
+            h3{
+                padding: 34px 63px 70px 63px;
+                color: white;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 155%;
+                text-align: center;
+                
+            }
+            
+            a{
+                padding: 28px 0;
+                max-width: 350px;
+            }
+            small{
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 155%;
+                text-align: center;
+                color: #FFFFFF;
+                margin: 25px 0;
+            }
+        }
+    }
+}
+}
+
+@media(max-width: 450px){
+    .popup{
+    &__body{
+        max-width: 371px;
+        max-height: 520px;
+        &__container{
+            .arrow{
+                display: none;
+            }
+            .popup__question{
+                min-width: 371px;
+                h2{
+                    text-align: center;
+                    font-size: 15px;
+                    // @include adaptiv-font(24, 5);
+                    line-height: 155%;
+                }
+            }
+            h3{
+                padding: 34px 30px 30px 30px;
+                color: white;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 155%;
+                text-align: center;
+                
+            }
+            
+            a{
+                padding: 28px 0;
+                max-width: 350px;
+                font-size: 13px;
+            }
+
+            small{
+                font-size: 12px;
+                line-height: 155%;
+                text-align: center;
+                color: #FFFFFF;
+                margin: 25px 0;
+                padding: 0 50px;
+            }
+        }
+    }
+}
+}
+
 body{
     margin: 0;
     padding: 0;
-    background: url('../imges/92dc3607bd5e0ec4c69cdba7038d8ce3\ 1.png') top / cover no-repeat;
+    background: url('https://static.tildacdn.com/tild3632-3730-4131-b665-373537356538/92dc3607bd5e0ec4c69c.png') top / cover no-repeat;
     background-size: round auto;
     font-family: 'El Messiri', sans-serif;
     padding: 50px 0;
@@ -38,8 +232,12 @@ h1, h2, h3{
     padding: 0 15px;
 }
 
-@import url('./popup.css');
-@import url('./animate.css');
+.containerPop{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 
 header{
     max-width: 100%;
@@ -94,7 +292,7 @@ main{
             .main__question{
                 position: relative;
                 min-height: 443px;
-                background: url('../imges/popup.png') top / cover no-repeat;
+                background: url('https://static.tildacdn.com/tild3963-3536-4433-b463-393964643636/popup.png') top / cover no-repeat;
                 border-radius: 20px;
                 .question{
                     background-color: white;
@@ -182,7 +380,7 @@ main{
                     background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), #FFFFFF;
                     border-radius: 10px;
                     border: solid 0px #DECCB2;
-                    a{
+                    .buttonLink{
                         text-decoration: none;
                         transition: 0.3s;
 
@@ -231,16 +429,20 @@ main{
             font-weight: 500;
         }
     }
+    
 }
+
+
 
 .main__question3{
     min-height: 443px;
-    background: url('../imges/popup.png') top / cover no-repeat;
+    background: url('https://static.tildacdn.com/tild3963-3536-4433-b463-393964643636/popup.png') top / cover no-repeat;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     // justify-content: center;
     // align-items: center;
+
     .question{
         background-color: white;
         display: flex;
@@ -281,6 +483,116 @@ main{
 
         }
     }
+    button{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-self: center;
+        cursor: pointer;
+        // width: maxWightper(1200px, 239px);
+        width: 239px;
+        height: 78px;
+        background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), #FFFFFF;
+        border-radius: 10px;
+        border: solid 0px #DECCB2;
+        margin: 39px 0 40px 0;
+        .buttonLink{
+            text-decoration: none;
+
+            color: #E2D0BF;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            @include adaptiv-font(24, 5);
+            line-height: 155%;
+            width: 239px;
+            height: 78px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            align-items: center;                    
+
+            .text{
+                text-transform: uppercase; 
+            }
+        }
+    }
+
+    .consult{
+        position: relative;
+        // padding: 55px 0;
+        padding: maxWightper(1000px,55px) 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        h3{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            @include adaptiv-font(20, 10); 
+            line-height: 155%;
+            text-align: center;
+            color: #FFFFFF;
+
+            padding: 0 maxWightper(1000px,116px);
+            margin: 0 0 37px 0;
+        }
+        .arrow{
+            position: absolute;
+            left: 800px;
+            top: 250px;
+            img{
+                width: 50px;
+                height: 50px;
+            }
+        }
+        h2{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            @include adaptiv-font(24, 14); 
+            line-height: 155%;
+            text-align: center;
+            color: #FFFFFF;
+
+            padding: 0 maxWightper(1000px,228px);
+            margin: 0 0 maxWightper(1000px,70px) 0;
+        }
+        a{
+            padding: 28px maxWightper(1000px,180px);
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            // @include adaptiv-font(16, 6); 
+            line-height: 155%;
+            text-align: center;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #856120;
+
+            margin: 0 0 maxWightper(1000px,30px) 0;
+        }
+        small{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            @include adaptiv-font(16, 6); 
+            line-height: 155%;
+            text-align: center;
+            color: #FFFFFF;
+
+            padding: 0 maxWightper(1000px,289px);
+        }
+    }
+
     .answers{
         padding: 29px 66px 75px 52px;
         padding-bottom: 14px;
@@ -318,38 +630,37 @@ main{
         }
     }
     
-    button{
-        position: static !important;
-        align-self: center;
-        margin: 0 0 40px 0;
-        min-width: maxWightper(1200px, 239px);
-        min-height: 78px;
-        background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), #FFFFFF;
-        border-radius: 10px;
-        border: solid 0px #DECCB2;
-        a{
+    
+        .linkpopap2{
             text-decoration: none;
             transition: 0.3s;
 
-            color: #4B4B4B;
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 24px;
-            @include adaptiv-font(24, 5);
-            line-height: 155%;
-            text-align: center;
+            position: static !important;
+            align-self: center;
+            margin: 0 0 40px 0;
+            min-width: maxWightper(1200px, 239px);
+            min-height: 78px;
+            background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), #FFFFFF;
+            border-radius: 10px;
+            border: solid 0px #DECCB2;
 
             display: flex;
             justify-content: center;
             gap: 23px;
             align-items: center;                    
+            padding: 12px;
 
             .text{
                 text-transform: uppercase; 
+                color: #4B4B4B; 
+                font-weight: 500;
+                font-size: 24px;
+                @include adaptiv-font(24, 5);
+                line-height: 155%;
+                font-family: 'Montserrat';
+                font-style: normal;
             }
         }
-    }
 }
 
 @media (min-width: 1200px){
@@ -405,6 +716,86 @@ main{
     }
 }
 
+@media(max-width: 900px){
+    main{
+        .main__body{
+            &__container{
+                .main__question3{
+                    .consult{
+                        .arrow{
+                            left: 650px;
+                            top: 210px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 750px){
+    main{
+        .main__body{
+            &__container{
+                .main__question3{
+                    .consult{
+                        .arrow{
+                            left: 580px;
+                            top: 210px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 660px){
+    main{
+        .main__body{
+            &__container{
+                .main__question3{
+                    .consult{
+                        .arrow{
+                            left: 500px;
+                            top: 210px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 560px){
+    main{
+        .main__body{
+            &__container{
+                .main__question3{
+                    .consult{
+                        .arrow{
+                            left: 400px;
+                            top: 190px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 460px){
+    main{
+        .main__body{
+            &__container{
+                .main__question3{
+                    .consult{
+                        .arrow{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media(max-width: 470px){
     main{
         .main__body{
@@ -423,6 +814,8 @@ main{
         }
     }
 }
+
+
 
 @media(max-width: 630px){
     header{
@@ -474,10 +867,13 @@ main{
                     }
                     button{
                         position: static !important;
-                        margin: 0 0 40px 0;
+                        margin: 0 0 30px 0;
+                        padding: 0 15px;
                         a{
-                            gap: 5px;
-                            @include adaptiv-font(15, 15);
+                            .text{
+                                gap: 5px;
+                                @include adaptiv-font(15, 15);
+                            }
                         }
                     }
                 }
@@ -513,14 +909,62 @@ main{
                         }
                     }
                     button{
-                        position: static !important;
-                        margin: 0 0 40px 0;
-                        a{
-                            gap: 5px;
-                            @include adaptiv-font(15, 15);
+                        max-width: 200px;
+                        .buttonLink{
+                            gap: 15px;
+                            padding: 0 15px;
+                            .text{
+                                @include adaptiv-font(15, 15);
+                            }
                         }
+
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px){
+    header{
+        .header__body{
+            &__container{
+                h1{
+                    font-size: 30px;
+                    @include adaptiv-font(30, 30);
+                    line-height: 135%;
+                }
+                h2{
+                    font-size: 16px;
+                    @include adaptiv-font(16, 16);
+                    
+                }
+            }
+        }
+    }
+    main{
+        .main__body{
+            &__container{
+                .main__question{
+                    .question{
+                        padding: 15px 0px 15px 5px ;
+                        border-radius: 20px;
+                        box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+                        h1{
+                            font-size: 14px;
+                            @include adaptiv-font(14, 14);
+                        }
+                    }
+                }   
+                .main__question3{
+                    .question{
+                        padding: 15px 0px 15px 5px;
+                        h1{
+                            font-size: 14px;
+                            @include adaptiv-font(14, 14);
+                        }
+                    }
+                }             
             }
         }
     }

@@ -152,13 +152,15 @@ const popup1 = () =>`
 <div class='popup '>
     <div class='popup__shell '></div>
     <div class='popup__body'>
-        <article class='popup__body__container'>
-            <div class="arrow"><img src="../imges/arrow2.svg" alt=""></div>
+        <article class='popup__body__container container'>
+            <div class="arrow"><img src="https://static.tildacdn.com/tild3137-6138-4433-b535-323531363433/arrow2.svg" alt=""></div>
             <div class="popup__question">
                 <h2>Как попасть на консультацию?</h2>
             </div>
             <h3>Запишитесь на <span> первую бесплатную консультацию</span>, нажав на кнопку.</h3>
-            <button>записаться на <br> консультацию</button>
+            <a href="#popup:form" style = 'color: #856120'>
+                записаться на <br> консультацию
+            </a>
             <small>Стоимость сессий индивидуальна. Количество сессий индивидуально.</small>
         </article>
     </div>
@@ -166,25 +168,36 @@ const popup1 = () =>`
 `
 
 const popup2 = ()=>`
-<div class='consultation'>
-    <div class='consultation__shell '></div>
-    <div class='consultation__body '>
-        <article class='consultation__body__container'>
-            <div class="arrow"><img src="../imges/arrow2.svg" alt=""></div>
-            <div class="consultation__question">
-                <h2>Как попасть на консультацию?</h2>
-                <div class="questionNumber">03</div>
-            </div>
-            <div class = 'consultation__continium'>«Если вы имете намерение изучать себя дальше и вам нужен наставник, вы можете записаться на первую консультацию 
-                и более подробно обсудить свой запрос с наставником.</div>
-            <h3>Запишитесь на <span> первую бесплатную консультацию</span>, нажав на кнопку.</h3>
-            <button>записаться на <br> консультацию</button>
-            <small>Стоимость сессий индивидуальна. Количество сессий индивидуально.</small>
-        </article>
-    </div>
-</div>
-`
+<main>
+        <div class="main__body">
+            <div class="main__body__container containerPop">
+                <section class = 'main__question3'>
+                    <section class="question">
+                        <h1>рекомендация от психолога:</h1>
+                        <div class="questionNumber">03</div>
+                    </section>
 
+                    <section class="consult">
+                        <h3>«Если вы имете намерение изучать себя дальше и вам нужен наставник, вы можете записаться на первую консультацию 
+                            и более подробно обсудить свой запрос с наставником.</h3>
+                        <h2>Запишитесь на <span> первую бесплатную консультацию</span>, нажав на кнопку. 
+                        </h2>
+                        <div class="arrow">
+                            <img src="https://static.tildacdn.com/tild3137-6138-4433-b535-323531363433/arrow2.svg" alt="">
+                        </div>
+                        <a class= 'linkpopap2' href="#popup:form" style = 'color: #856120'>
+                            записаться на <br> консультацию
+                        </a>
+                        <small>
+                            Стоимость сессий индивидуальна. Количество сессий индивидуально.
+                        </small>
+                    </section>
+
+                    </section>
+            </div>
+        </div>
+    </main>
+`
 const answerPsix = (mainQuestion, question, number) => `
 <main>
     <div class="main__body">
@@ -198,11 +211,11 @@ const answerPsix = (mainQuestion, question, number) => `
                     <div class="answer3">
                         ${question}
                 </section>
-                <button class = 'popup__open btm3'>
-                    <div id = 'popup' class = 'buttonLink' href="./popup1.html" >
-                        <p class="text">Спасибо</p>
-                        <img src="../imges/Arrow.svg" class="arrow"></img>
-                    </div> 
+                <button class = 'btmPop'>
+                <a id = 'popup' class = 'buttonLink' style = 'color: #4B4B4B;'>
+                    <p class="text">Спасибо</p>
+                    <img src="https://static.tildacdn.com/tild6230-3135-4163-a165-303366623865/Arrow.svg" class="arrow"></img>
+                </a> 
                 </button>
             </section>
         </div>
@@ -225,10 +238,10 @@ const contant = (mainQuestion, question, number) =>`
                         </div>
                     </section>
                     <button>
-                        <div class = 'buttonLink'>
+                        <a class = 'buttonLink' style = 'color: #4B4B4B;'>
                             <p class="text">далее</p>
-                            <img src="../imges/Arrow.svg" class="arrow"></img>
-                        </div> 
+                            <img src="https://static.tildacdn.com/tild6230-3135-4163-a165-303366623865/Arrow.svg" class="arrow"></img>
+                        </a > 
                     </button>
                 </section>
                 
@@ -267,6 +280,9 @@ const big = (swift) => {
                 if(enter.className == 'answerOne answerEnter'){
                     swift(enter, main);
                 }
+                else if(button.className == 'btmPop'){
+                    swift(enter, main, button);
+                }
 
             })
         })
@@ -282,6 +298,7 @@ const checkArray = ()=>{  //проверка на массив
     }
 }
 
+
 big((enter, main)=>{ 
         switch(enter.textContent){
             case 'Поработать над своей реализацией': 
@@ -295,16 +312,44 @@ big((enter, main)=>{
                             main.remove();
                             header.insertAdjacentHTML('afterend',answerPsix(mainQuestions[2],questions[2],'03'))
                             checkArray()
+
+                            document.querySelector('button').addEventListener('click',()=>{
+                                document.querySelector('main').remove();
+                                header.insertAdjacentHTML('afterend',popup1())
+                            })
                             big((enter, main)=>{
-                                
+                                switch(enter.textContent){
+                                    case '': 
+                                        main.remove();
+                                        header.insertAdjacentHTML('afterend',answerPsix(mainQuestions[2],questions[2],'03'))
+                                        checkArray()
+                                        big((enter, main)=>{
+                                            
+                                        })
+                                        break;
+                                }            
                             })
                             break;
                         case 'Хочу понять, в каком направлении двигаться в жизни, чтобы чувствовать удовлетворение и радость': 
                             main.remove();
                             header.insertAdjacentHTML('afterend',answerPsix(mainQuestions[3],questions[3],'03'))
                             checkArray()
+
+                            document.querySelector('button').addEventListener('click',()=>{
+                                document.querySelector('main').remove();
+                                header.insertAdjacentHTML('afterend',popup1())
+                            })
                             big((enter, main)=>{
-                                
+                                switch(enter.textContent){
+                                    case '': 
+                                        main.remove();
+                                        header.insertAdjacentHTML('afterend',answerPsix(mainQuestions[2],questions[2],'03'))
+                                        checkArray()
+                                        big((enter, main)=>{
+                                            
+                                        })
+                                        break;
+                                } 
                             })
                             break;
                     }            
@@ -334,6 +379,11 @@ big((enter, main)=>{
                                         main.remove();
                                         header.insertAdjacentHTML('afterend',answerPsix(mainQuestions[2],questions[7],'04'))
                                         checkArray()
+
+                                        document.querySelector('button').addEventListener('click',()=>{
+                                            document.querySelector('main').remove();
+                                            header.insertAdjacentHTML('afterend',popup1())
+                                        })
                                         big((enter, main)=>{
                                             
                                         })
@@ -342,7 +392,13 @@ big((enter, main)=>{
                                         main.remove();
                                         header.insertAdjacentHTML('afterend',answerPsix(mainQuestions[2],questions[8],'04'))
                                         checkArray()
+
+                                        document.querySelector('button').addEventListener('click',()=>{
+                                            document.querySelector('main').remove();
+                                            header.insertAdjacentHTML('afterend',popup1())
+                                        })
                                         big((enter, main)=>{
+
                                             
                                         })
                                         break;
@@ -350,7 +406,12 @@ big((enter, main)=>{
                                         main.remove();
                                         header.insertAdjacentHTML('afterend',answerPsix(mainQuestions[2],questions[9],'04'))
                                         checkArray()
+                                        document.querySelector('button').addEventListener('click',()=>{
+                                            document.querySelector('main').remove();
+                                            header.insertAdjacentHTML('afterend',popup1())
+                                        })
                                         big((enter, main)=>{
+
                                             
                                         })
                                         break;
@@ -367,7 +428,12 @@ big((enter, main)=>{
                                         main.remove();
                                         header.insertAdjacentHTML('afterend',answerPsix(mainQuestions[2],questions[10],'04'))
                                         checkArray()
+                                        document.querySelector('button').addEventListener('click',()=>{
+                                            document.querySelector('main').remove();
+                                            header.insertAdjacentHTML('afterend',popup1())
+                                        })
                                         big((enter, main)=>{
+                                            
                                             
                                         })
                                         break;
@@ -375,16 +441,26 @@ big((enter, main)=>{
                                         main.remove();
                                         header.insertAdjacentHTML('afterend',answerPsix(mainQuestions[2],questions[11],'04'))
                                         checkArray()
+                                        document.querySelector('button').addEventListener('click',()=>{
+                                            document.querySelector('main').remove();
+                                            header.insertAdjacentHTML('afterend',popup1())
+                                        })
                                         big((enter, main)=>{
                                             
+                                        
                                         })
                                         break;
                                     case 'Проблемы с детьми. Ребенок не слышит меня': 
                                         main.remove();
                                         header.insertAdjacentHTML('afterend',answerPsix(mainQuestions[2],questions[12],'04'))
                                         checkArray()
+                                        document.querySelector('button').addEventListener('click',()=>{
+                                            document.querySelector('main').remove();
+                                            header.insertAdjacentHTML('afterend',popup1())
+                                        })
                                         big((enter, main)=>{
                                             
+                                        
                                         })
                                         break;
                                 } 
@@ -416,6 +492,10 @@ big((enter, main)=>{
                                         main.remove();
                                         header.insertAdjacentHTML('afterend',answerPsix(mainQuestions[2],questions[15],'04'))
                                         checkArray()
+                                        document.querySelector('button').addEventListener('click',()=>{
+                                            document.querySelector('main').remove();
+                                            header.insertAdjacentHTML('afterend',popup1())
+                                        })
                                         big((enter, main)=>{
                                             
                                         })
@@ -424,7 +504,11 @@ big((enter, main)=>{
                                         main.remove();
                                         header.insertAdjacentHTML('afterend',answerPsix(mainQuestions[2],questions[16],'04'))
                                         checkArray()
-                                        big((enter, main)=>{
+                                        document.querySelector('button').addEventListener('click',()=>{
+                                            document.querySelector('main').remove();
+                                            header.insertAdjacentHTML('afterend',popup1())
+                                        })
+                                        big((enter, main, button)=>{
                                             
                                         })
                                         break;
