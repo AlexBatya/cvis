@@ -149,22 +149,30 @@ const questions = [
 ]
 
 const popup1 = () =>`
-<div class='popup '>
-    <div class='popup__shell '></div>
-    <div class='popup__body'>
-        <article class='popup__body__container container'>
-            <div class="arrow"><img src="https://static.tildacdn.com/tild3137-6138-4433-b535-323531363433/arrow2.svg" alt=""></div>
-            <div class="popup__question">
-                <h2>Как попасть на консультацию?</h2>
+<main>
+        <div class="main__body">
+            <div class="main__body__container containerPopup1">
+                <section class = 'main__question3'>
+                    <div class="popup__question">
+                        <h2>Как попасть на консультацию?</h2>
+                    </div>
+                    <section class="record">
+                        <h2>Запишитесь на <span> первую бесплатную консультацию</span>, нажав на кнопку. </h2>
+                        <div class="arrow">
+                            <img src="https://static.tildacdn.com/tild3137-6138-4433-b535-323531363433/arrow2.svg" alt="">
+                        </div>
+                        <a class= 'popupLink' href="#popup:form" style = 'color: #856120'>
+                            записаться на <br> консультацию
+                        </a>
+                        <small>
+                            Стоимость сессий индивидуальна. Количество сессий индивидуально.
+                        </small>
+                    </section>
+
+                </section>
             </div>
-            <h3>Запишитесь на <span> первую бесплатную консультацию</span>, нажав на кнопку.</h3>
-            <a href="#popup:form" style = 'color: #856120'>
-                записаться на <br> консультацию
-            </a>
-            <small>Стоимость сессий индивидуальна. Количество сессий индивидуально.</small>
-        </article>
-    </div>
-</div>
+        </div>
+    </main>
 `
 
 const popup2 = ()=>`

@@ -13,439 +13,172 @@ $maxWidth: 1200;
 @function maxWightper($maxWidth,$width){
     @return (100% * $width)/$maxWidth
 };
-body{
-        background: none;
-    }
-h1, h2, h3, p{
-    padding: 0;
-    margin: 0;
+
+.containerPopup1{
+    max-width: 671px;
+    margin: 0 auto;
+    padding: 0 15px; 
 }
 
-.popup{
-    // position: relative;
+.popup__question{
+    background: #FFFFFF;
+    box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
+    border-radius: 20px;
+        width: 100%;
+    h2{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 26px;
+        @include adaptiv-font(26, 14);
+        line-height: 155%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #4B4B4B;
+
+        padding: 47px maxWightper(671px, 80px) 33px maxWightper(671px, 80px);
+        text-align: center;
+    }
+    
+}
+.record{
+    position: relative;
     display: flex;
     justify-content: center;
-    z-index: 2;
+    align-items: center;
+    flex-direction: column;
+    h2{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        @include adaptiv-font(24, 20);
+        line-height: 155%;
+        text-align: center;
+        color: #FFFFFF;
+
+        padding: 0 maxWightper(671px, 63px);
+        margin: 34px 0 0 0;
+    }
+
+    .arrow{
+        position: absolute;
+        top: 100px; 
+        left: 560px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .popupLink{
+        background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), linear-gradient(95.22deg, #FFD278 12.45%, #F5D7A2 47.26%, #FFD07E 100%);
+        border-radius: 12.0623px; 
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        @include adaptiv-font(16, 15);
+        line-height: 155%;
+        text-align: center;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #856120;
+        text-decoration: none;
+
+        padding: 29px maxWightper(671px, 120px);
+        margin: 70px 0 0 0;
+
+    }
+    small{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        @include adaptiv-font(16, 10);
+        line-height: 155%;
+        text-align: center;
+        color: #FFFFFF; 
+
+        padding: 0 125px;
+        margin: 30px 0 36px 0;
+    }
     
-    &__body{
-        margin: 64px 0 0 0;
-        position: relative;
-        top: 0;
-        left: 0;
-        max-width: 671px;
-        max-height: 520px;
-        border-radius: 20px ;
-        background: url('https://static.tildacdn.com/tild3963-3536-4433-b463-393964643636/popup.png') top / cover no-repeat;
-        &__container{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            .arrow{
-                position: absolute;
-                top: 216px;
-                left: 560px;
-                width: 40px;
-                height: 40px;
-            }
-            .popup__question{
-                min-width: 671px;
-                background-color: white;
-                display: flex;
-                justify-content: center;
-                border-radius: 20px;
-                padding: 47px 0 33px 0;
-                box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
-                h2{
-                    text-transform: uppercase; 
-                    font-family: 'Montserrat';
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 26px;
-                    // @include adaptiv-font(24, 5);
-                    line-height: 155%;
-                }
-            }
-            h3{
-                padding: 34px 63px 70px 63px;
-                color: white;
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 300;
-                font-size: 24px;
-                line-height: 155%;
-                text-align: center;
-                span{
-                    font-weight: 500;
-                }
-            }
-            
-            button{
-                background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), linear-gradient(95.22deg, #FFD278 12.45%, #F5D7A2 47.26%, #FFD07E 100%);
-                border-radius: 12.0623px;
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 500;
-                padding: 28px 0;
-                width: 550px;
-                text-align: center;
-                font-size: 16px;
-                line-height: 155%;
-                text-align: center;
-                letter-spacing: 0.16em;
-                text-transform: uppercase;
+}
 
-                box-shadow: linear-gradient(120.38deg, #C1B4A0 30.49%, #DECCB2 93.2%), #CF9A3C;
-
-                border: none;
-                color: #856120;
-            }
-            small{
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 155%;
-                text-align: center;
-                color: #FFFFFF;
-                padding: 0 125px;
-                margin: 25px 0;
-            }
+@media(min-width: 1200px){
+    .popup__question{
+        h2{
+            @include adaptiv-font(26, 26);
         }
     }
-} 
-
-@media(max-width: 630px){
-.popup{
-    &__body{
-        max-width: 571px;
-        max-height: 520px;
-        &__container{
-            .arrow{
-                position: absolute;
-                top: 250px;
-                left: 400px;
-            }
-            .popup__question{
-                min-width: 571px;
-            }
-            h3{
-                padding: 34px 63px 70px 63px;
-                color: white;
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 300;
-                font-size: 24px;
-                line-height: 155%;
-                text-align: center;
-                
-            }
-            
-            button{
-                padding: 28px 0;
-                max-width: 350px;
-            }
-            small{
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 155%;
-                text-align: center;
-                color: #FFFFFF;
-                margin: 25px 0;
-            }
+    .record{
+        h2{
+            @include adaptiv-font(24, 24);
         }
-    }
-}
-}
 
-@media(max-width: 450px){
-    .popup{
-    &__body{
-        max-width: 471px;
-        max-height: 520px;
-        &__container{
-            .arrow{
-                position: absolute;
-                top: 180px;
-                left: 400px;
-            }
-            .popup__question{
-                min-width: 471px;
-                h2{
-                    text-transform: uppercase; 
-                    font-family: 'Montserrat';
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 20px;
-                    // @include adaptiv-font(24, 5);
-                    line-height: 155%;
-                }
-            }
-            h3{
-                padding: 34px 63px 70px 63px;
-                color: white;
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 300;
-                font-size: 15px;
-                line-height: 155%;
-                text-align: center;
-                
-            }
-            
-            button{
-                padding: 28px 0;
-                max-width: 350px;
-            }
-            small{
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 155%;
-                text-align: center;
-                color: #FFFFFF;
-                padding: 0 90px;
-                margin: 25px 0;
-            }
+        .popupLink{
+            @include adaptiv-font(16, 16);
+
         }
-    }
+        small{
+            @include adaptiv-font(16, 16);
+        }
+        
+    }   
 }
-}
 
-.consultation{
-    
-    display: flex;
-    justify-content: center;
-    &__body{
-        margin: 64px 0 0 0;
-        position: relative;
-        top: 0;
-        left: 0;
-        border-radius: 20px;
-        max-width: 1000px;
-        max-height: 800px; 
-        background: url('https://static.tildacdn.com/tild3963-3536-4433-b463-393964643636/popup.png') top / cover no-repeat;
-        &__container{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            .arrow{
-                position: absolute;
-                top: 440px;
-                left: 750px;
-                width: 40px;
-                height: 40px;
-            }
-            .consultation__question{
-                // min-width: 671px;
-                width: 100%;
-                background-color: white;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                border-radius: 20px ;
-                padding: 47px 0 33px 0;
-                box-shadow: 0px -1px 43px rgba(99, 99, 99, 0.16);
-                h2{
-                    text-transform: uppercase; 
-                    font-family: 'Montserrat';
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 26px;
-                    // @include adaptiv-font(24, 5);
-                    line-height: 155%;
-                }
-                .questionNumber{
-                    margin:0 100px 0 0; 
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-transform: uppercase; 
-                    font-family: 'El Messiri';
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 66.8919px;
-                    @include adaptiv-font(66.8919, 16.5);
-                    line-height: 135%;
-                    color:  #E2D0BF;
-                }
-                .questionNumber::before{
-                    content: '';
-                    flex: 0 0 70px;
-                    margin: 0 21px 0 0; 
-                    height: 1px;
-                    background-color: #E2D0BF;
-
-                }
-            }
-            .consultation__continium{
-                margin: 55px 79px 37px 116px;
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 155%;
-                text-align: center;
-                color: #FFFFFF; 
-            }
-            h3{
-                padding: 34px 228px 70px 227px;
-                color: white;
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 300;
-                font-size: 24px;
-                line-height: 155%;
-                text-align: center;
-                span{
-                    font-weight: 500;
-                }
-            }
-            
-            button{
-                background: linear-gradient(135.31deg, #C1B4A0 -63.03%, #F7E7D8 47.09%, #DECCB2 118.11%), linear-gradient(95.22deg, #FFD278 12.45%, #F5D7A2 47.26%, #FFD07E 100%);
-                border-radius: 12.0623px;
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 500;
-                padding: 28px 0;
-                width: 550px;
-                text-align: center;
-                font-size: 16px;
-                line-height: 155%;
-                text-align: center;
-                letter-spacing: 0.16em;
-                text-transform: uppercase;
-
-                box-shadow: linear-gradient(120.38deg, #C1B4A0 30.49%, #DECCB2 93.2%), #CF9A3C;
-
-                border: none;
-                color: #856120;
-            }
-            small{
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 155%;
-                text-align: center;
-                color: #FFFFFF;
-                padding: 0 289px;
-                margin: 25px 0;
-            }
+@media(max-width: 650px){
+    .record{
+        .arrow{
+            top: 100px;
+            left: 500px;
         }
     }
 }
 
-@media(max-width: 870px){
-    .consultation{
-        &__body{
-            .arrow{
-                top: 480px;
-                left: 650px;
-            }
+@media(max-width: 570px){
+    .record{
+        .arrow{
+            top: 100px;
+            left: 450px;
+        }
+    }
+}
+@media(max-width: 510px){
+    .record{
+        .arrow{
+            top: 120px;
+            left: 400px;
+        }
+    }
+}
+@media(max-width: 470px){
+    .record{
+        .arrow{
+            top: 120px;
+            left: 330px;
         }
     }
 }
 
-
-@media(max-width: 800px){
-    .consultation{
-        .consultation__body{
-            max-width: 800px;
-            max-height: 800px; 
-            .arrow{
-                top: 420px;
-                left: 650px;   
-            }
-            .consultation__question{
-                padding: 27px 0px 23px 0px;
-                display: flex;
-                h2{
-                    padding: 0 20px;
-                    font-size: 26px;
-                    line-height: 155%;
-                }
-                .questionNumber{
-                    margin:0 100px 0 0; 
-                    @include adaptiv-font(66.8919, 16.5);
-                }
-                
-            }
-            .consultation__continium{
-                margin: 55px 79px 37px 116px;
-            }
-            h3{
-                padding: 34px 128px 70px 127px;
-            }
-            
-            button{
-                padding: 28px 0;
-                max-width: 550px;
-            }
-            small{
-                padding: 0 189px;
-            }
+@media(max-width: 400px){
+    .record{
+        .arrow{
+            top: 130px;
+            left: 290px;
+        }
+        h2{
+            font-size: 15px;
+        }
+        small{
+            padding: 0 30px;
         }
     }
 }
-
-@media(max-width: 720px){
-    .consultation{
-        &__body{
-            .arrow{
-                top: 480px;
-                left: 150px;
-            }
-        }
-    }
-}
-
-
-
-@media(max-width: 630px){
-    .consultation{
-        .consultation__body{
-            max-width: 600px;
-            max-height: 900px; 
-            .arrow{
-                top: 480px;
-                left: 550px;   
-            }
-            .consultation__question{
-                padding: 27px 0px 23px 0px;
-                display: flex;
-                h2{
-                    padding: 0 20px;
-                    font-size: 26px;
-                    line-height: 155%;
-                }
-                .questionNumber{
-                    margin:0 100px 0 0; 
-                    @include adaptiv-font(66.8919, 16.5);
-                }
-                
-            }
-            .consultation__continium{
-                margin: 55px 59px 37px 55px;
-
-            }
-            h3{
-                padding: 34px 80px 70px 80px;
-            }
-            
-            button{
-                padding: 28px 0;
-                max-width: 550px;
-            }
-            small{
-                padding: 0 89px;
-            }
+@media(max-width: 350px){
+    .record{
+        .arrow{
+            display: none;
         }
     }
 }
