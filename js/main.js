@@ -271,6 +271,7 @@ const big = (swift) => {
     const answers = document.querySelectorAll('.answerOne');
     const button = document.querySelector('button');
     const a = document.querySelector('a');
+    const restart = document.querySelector('.restart');
 
     answers.forEach(elem =>{
 
@@ -293,6 +294,8 @@ const big = (swift) => {
                 }
 
             })
+
+
         })
     })
 }
